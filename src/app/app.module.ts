@@ -27,6 +27,7 @@ import { InterviewerComponent } from './interviewer/interviewer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NewjobComponent } from './newjob/newjob.component';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -39,7 +40,8 @@ import { CandidateProfileComponent } from './candidate-profile/candidate-profile
    InterviewerComponent,
    HomepageComponent,
    NewjobComponent,
-   CandidateProfileComponent
+   CandidateProfileComponent,
+   ProfileComponent
   ],
   imports: [
     CommonModule,
