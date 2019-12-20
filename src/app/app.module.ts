@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JobsComponent } from './jobs/jobs.component';
 import { InterviewerComponent } from './interviewer/interviewer.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { NewjobComponent } from './newjob/newjob.component';
 
 
 
@@ -35,7 +36,8 @@ import { HomepageComponent } from './homepage/homepage.component';
    UserComponent,
    JobsComponent,
    InterviewerComponent,
-   HomepageComponent
+   HomepageComponent,
+   NewjobComponent
   ],
   imports: [
     CommonModule,
