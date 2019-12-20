@@ -9,6 +9,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 
 import {NewjobComponent} from './newjob/newjob.component';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 const routes: Routes = [
   { path: 'user', component: UserComponent },
@@ -18,7 +20,8 @@ const routes: Routes = [
   {path : 'interviewer', component : InterviewerComponent},
   {path : 'homepage', component : HomepageComponent},
   {path: 'newjob', component: NewjobComponent},
-  {path: 'candidateprofile', component: CandidateProfileComponent}
+  {path: 'candidateprofile', component: CandidateProfileComponent},
+  {path:'profile',component:ProfileComponent}
 ];
 
 @NgModule({
