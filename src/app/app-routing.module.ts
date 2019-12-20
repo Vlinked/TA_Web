@@ -8,6 +8,7 @@ import { InterviewerComponent } from './interviewer/interviewer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 import {NewjobComponent} from './newjob/newjob.component';
+import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
 
 const routes: Routes = [
   { path: 'user', component: UserComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path : 'jobs', component : JobsComponent},
   {path : 'interviewer', component : InterviewerComponent},
   {path : 'homepage', component : HomepageComponent},
-  {path: 'newjob', component: NewjobComponent}
+  {path: 'newjob', component: NewjobComponent},
+  {path: 'candidateprofile', component: CandidateProfileComponent}
 ];
 
 @NgModule({

@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.custom-circle {
+    color: #fff !important;
+    border: 3px solid #ba9825;
+    border-radius: -10px;
+    background-color: #ba9825;
+    font-size: 33px;
+    display: inline-block;
+    line-height: 2px;
+    padding: 2px 3px;
+    border-radius: 84px;
+    /* margin-left: 30px; */
+}
