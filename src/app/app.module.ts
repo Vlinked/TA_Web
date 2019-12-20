@@ -24,6 +24,7 @@ import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JobsComponent } from './jobs/jobs.component';
 import { InterviewerComponent } from './interviewer/interviewer.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -33,7 +34,8 @@ import { InterviewerComponent } from './interviewer/interviewer.component';
    LoginComponent,
    UserComponent,
    JobsComponent,
-   InterviewerComponent
+   InterviewerComponent,
+   HomepageComponent
   ],
   imports: [
     CommonModule,

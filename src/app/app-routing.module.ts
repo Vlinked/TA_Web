@@ -5,6 +5,9 @@ import {UserComponent} from './user/user.component';
 import {LoginComponent} from './login/login.component';
 import {JobsComponent} from './jobs/jobs.component';
 import { InterviewerComponent } from './interviewer/interviewer.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
+
 
 
 
@@ -14,6 +17,8 @@ const routes: Routes = [
   {path : '', component : LoginComponent},
   {path : 'jobs', component : JobsComponent},
   {path : 'interviewer', component : InterviewerComponent},
+    {path : 'homepage', component : HomepageComponent},
+
 
   
 ];
