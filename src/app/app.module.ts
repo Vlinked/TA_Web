@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import {UserComponent} from './user/user.component';
 
 import { MatCardModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatFormFieldModule,MatToolbarModule,
   MatButtonModule,
   MatDialogModule,
@@ -76,7 +76,9 @@ import { ProfileComponent } from './profile/profile.component';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatSelectModule 
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [],
