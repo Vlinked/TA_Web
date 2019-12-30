@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -21,6 +21,9 @@ password: string;
         this.router.navigate(["interviewer"]);
     }
     
+  }
+  registerpage(){
+    this.router.navigate(["register"]);
   }
   }
 

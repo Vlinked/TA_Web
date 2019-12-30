@@ -28,6 +28,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NewjobComponent } from './newjob/newjob.component';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -41,7 +42,8 @@ import { ProfileComponent } from './profile/profile.component';
    HomepageComponent,
    NewjobComponent,
    CandidateProfileComponent,
-   ProfileComponent
+   ProfileComponent,
+   RegisterComponent
   ],
   imports: [
     CommonModule,
