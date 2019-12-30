@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import {UserComponent} from './user/user.component';
 
 import { MatCardModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule,MatToolbarModule,
   MatButtonModule,
@@ -18,7 +19,7 @@ import { MatFormFieldModule,MatToolbarModule,
   MatIconModule,
   MatExpansionModule,
   MatSelectModule 
-   } from '@angular/material';
+} from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { MatInputModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,7 +35,7 @@ import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+   AppComponent,
    LoginComponent,
    UserComponent,
    JobsComponent,
@@ -50,7 +51,6 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    FormsModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatInputModule,
@@ -62,7 +62,9 @@ import { RegisterComponent } from './register/register.component';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatSelectModule 
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     CommonModule,
@@ -78,7 +80,7 @@ import { RegisterComponent } from './register/register.component';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatSelectModule 
+    MatSelectModule,
   ],
 
   providers: [],
