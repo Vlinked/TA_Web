@@ -1,13 +1,61 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Vlinked</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false">notification_important</mat-icon>
-  </mat-toolbar-row>
-</mat-toolbar>
-<br/>
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>New Job</mat-card-title>
-  </mat-card-header>
-</mat-card>
+<div class="container">
+  <div class="row">
+    <h3>New Job</h3>
+  </div>
+  <form [formGroup]="newJobForm">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <mat-form-field class="col-md-12">
+                  <mat-label>Designation</mat-label>
+                  <mat-select formControlName="designation" required>
+                    <mat-option *ngFor="let designation of designations" [value]="designation.value" >
+                      {{designation.value}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="Experience" formControlName="experience" required>
+              </mat-form-field>
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="CTC" formControlName="ctc" required>
+              </mat-form-field>
+                <mat-form-field class="col-md-12">
+                <input matInput placeholder="Qualification" formControlName="qualification" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="Skill set" formControlName="skillset" required>
+              </mat-form-field>
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="Positions" formControlName="positions" required>
+              </mat-form-field>
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="Job type" formControlName="jobtype" required>
+              </mat-form-field>
+              <mat-form-field class="col-md-12">
+                <input matInput placeholder="Notice period" formControlName="noticeperiod" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <mat-form-field class="col-md-12">
+              <textarea matInput placeholder="Job description" formControlName="jobdescription" required></textarea>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-4">
+              <button mat-raised-button color="primary" (click)="newJobPost()">POST</button>
+            </div>
+          </div>
+        </div>     
+      </div>      
+    </div>
+  </form>
+</div>

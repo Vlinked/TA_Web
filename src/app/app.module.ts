@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import {UserComponent} from './user/user.component';
 
 import { MatCardModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule,MatToolbarModule,
   MatButtonModule,
@@ -35,7 +36,7 @@ import { DemotableComponent } from './demotable/demotable.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+   AppComponent,
    LoginComponent,
    UserComponent,
    JobsComponent,
@@ -51,7 +52,6 @@ import { DemotableComponent } from './demotable/demotable.component';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    FormsModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
@@ -64,7 +64,9 @@ import { DemotableComponent } from './demotable/demotable.component';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatSelectModule 
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[
     CommonModule,
@@ -80,7 +82,7 @@ import { DemotableComponent } from './demotable/demotable.component';
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
-    MatSelectModule 
+    MatSelectModule,
   ],
 
   providers: [],

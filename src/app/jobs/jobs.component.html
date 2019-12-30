@@ -1,90 +1,79 @@
-<!-- <mat-toolbar color="primary">
-  <mat-toolbar-row>
-  <span>Jobs</span>
-      <span class="example-fill-remaining-space"></span>
-      <span class="align-center"></span>
-      <span style="margin-left: 80%;"></span>
-      <button mat-button>About</button>
-      <button mat-button>Contact</button>
-   </mat-toolbar-row>
-</mat-toolbar> -->
-
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Job Title:
-      </mat-panel-title>
-      <mat-panel-description>
-        FULL STACK Developer
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-form-field>
-      <input matInput placeholder="Role">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Experience">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="CTC">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-    <mat-form-field>
-      <input matInput placeholder="Positions">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Roles & Responsibilites">
-    </mat-form-field>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Job Title:
-      </mat-panel-title>
-      <mat-panel-description>
-        .NET Developer
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-form-field>
-      <input matInput placeholder="Role">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Experience">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="CTC">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-    <mat-form-field>
-      <input matInput placeholder="Positions">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Roles & Responsibilites">
-    </mat-form-field>
-  </mat-expansion-panel>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Job Title:
-      </mat-panel-title>
-      <mat-panel-description>
-        Andriod Developer
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <mat-form-field>
-      <input matInput placeholder="Role">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Experience">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="CTC">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-    <mat-form-field>
-      <input matInput placeholder="Positions">
-    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <mat-form-field>
-      <input matInput placeholder="Roles & Responsibilites">
-    </mat-form-field>
-  </mat-expansion-panel>
-</mat-accordion>
+<div class="container"> <br/><br/>
+    <button mat-raised-button color="primary" routerLink="/newjob">+ New job</button>
+  <br/><br/>
+  <mat-accordion *ngFor="let job of jobs">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+          <mat-panel-title>
+            <label>Job Title: </label>&nbsp;&nbsp;
+            {{job.designation}}
+          </mat-panel-title>  
+          <mat-icon (click)="editClicked(job.id)">edit</mat-icon> &nbsp;&nbsp;
+          <mat-icon>delete</mat-icon>&nbsp;&nbsp;
+      </mat-expansion-panel-header>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <label>Designation: </label>&nbsp;&nbsp;
+              <label class="label" *ngIf="!isEdit">{{job.designation}}</label>
+              <mat-form-field *ngIf="isEdit">
+                <input matInput placeholder="Designation">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <label>Experience: </label>&nbsp;&nbsp;
+              <label class="label" *ngIf="!isEdit">{{job.experience}}</label>
+              <mat-form-field *ngIf="isEdit">
+                 <input matInput placeholder="Experience">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <label>CTC: </label>&nbsp;&nbsp;
+              <label class="label" *ngIf="!isEdit">{{job.ctc}}</label>
+              <mat-form-field *ngIf="isEdit">
+                 <input matInput placeholder="CTC">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <label>Positions: </label>&nbsp;&nbsp;
+              <label class="label" *ngIf="!isEdit">{{job.positions}}</label>
+              <mat-form-field *ngIf="isEdit">
+                <input matInput placeholder="Positions">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <label>Roles & Responsibilities: </label>&nbsp;&nbsp;
+          <label class="label" *ngIf="!isEdit">{{job.responsibilities}}</label>
+          <mat-form-field *ngIf="isEdit">
+             <textarea matInput placeholder="Roles & Responsibilites"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div *ngIf="isEdit" class="col-md-12">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-4">
+            <button mat-raised-button color="primary">EDIT</button>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
 
 

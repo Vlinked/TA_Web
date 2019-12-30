@@ -10,7 +10,12 @@ import { HomepageComponent } from './homepage/homepage.component';
 import {NewjobComponent} from './newjob/newjob.component';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
 import { ProfileComponent } from './profile/profile.component';
+<<<<<<< HEAD
 import { DemotableComponent } from './demotable/demotable.component';
+=======
+import { RegisterComponent } from './register/register.component';
+
+>>>>>>> 985b0336b984237fabf8c104a97f6a3d5f016486
 
 
 const routes: Routes = [
@@ -23,7 +28,11 @@ const routes: Routes = [
   {path: 'newjob', component: NewjobComponent},
   {path: 'candidateprofile', component: CandidateProfileComponent},
   {path:'profile',component:ProfileComponent},
+<<<<<<< HEAD
   {path:'demotable',component:DemotableComponent}
+=======
+  {path:'register',component:RegisterComponent}
+>>>>>>> 985b0336b984237fabf8c104a97f6a3d5f016486
 ];
 
 @NgModule({
