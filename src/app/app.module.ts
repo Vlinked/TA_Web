@@ -17,7 +17,8 @@ import { MatFormFieldModule,MatToolbarModule,
   MatMenuModule,
   MatIconModule,
   MatExpansionModule,
-  MatSelectModule 
+  MatSelectModule,
+  MatPaginatorModule 
    } from '@angular/material';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { MatInputModule} from '@angular/material';
@@ -28,6 +29,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { NewjobComponent } from './newjob/newjob.component';
 import { CandidateProfileComponent } from './candidate-profile/candidate-profile.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DemotableComponent } from './demotable/demotable.component';
 
 
 
@@ -41,7 +43,8 @@ import { ProfileComponent } from './profile/profile.component';
    HomepageComponent,
    NewjobComponent,
    CandidateProfileComponent,
-   ProfileComponent
+   ProfileComponent,
+   DemotableComponent
   ],
   imports: [
     CommonModule,
@@ -51,6 +54,7 @@ import { ProfileComponent } from './profile/profile.component';
     FormsModule,
     MatFormFieldModule,
     MatProgressSpinnerModule,
+    MatPaginatorModule,
     MatInputModule,
     BrowserAnimationsModule,
     MatToolbarModule,

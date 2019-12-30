@@ -1,0 +1,26 @@
+.custom-circle {
+    color: #fff !important;
+    border: 3px solid #ba9825;
+    border-radius: -10px;
+    background-color: #ba9825;
+    font-size: 33px;
+    display: inline-block;
+    line-height: 2px;
+    padding: 2px 3px;
+    border-radius: 84px;
+    margin-left: 30px;
+}
+input[type="file"] {
+    display: none;
+}
+
+.roundbox {
+    /* background-color: #ffff; */
+    /* width: 171px; */
+    border: 2px solid #dbdbdb;
+    padding: 18px;
+    width: 157px;
+    margin: 15px;
+    border-radius: 8px;
+    max-height: 89px;
+}
